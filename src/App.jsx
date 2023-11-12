@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Myheader from "./navbar/myheader";
+import Myheader from "../navbar/myheader";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import LoginPage from "./Register/LoginPage";
