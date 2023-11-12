@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  color: rgb(243, 240, 240);
+  text-decoration: underline 0.2rem;
+
+  text-underline-offset: 5px;
+}
+
+/* .container {
+  padding-left: 4rem;
+  /* padding-right: 2rem; */
+/* } */
+
+.rc-pagination {
+  display: flex;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.rc-pagination li {
+  cursor: pointer;
+  border: 1px solid green;
+  padding: 0.5rem;
+}
+.rc-pagination-options {
+  display: none;
+}
+.rc-pagination-item-active {
+  background-color: mediumseagreen;
+}
+.rc-pagination-disabled {
+  cursor: no-drop !important;
+  opacity: 0.5;
+}
