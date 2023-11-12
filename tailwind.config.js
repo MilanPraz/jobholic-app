@@ -7,7 +7,7 @@ export default {
         "my-green": "bg-green-700",
       },
       backgroundImage: {
-        saleBanner: "url('./public/girl.jpg')",
+        saleBanner: "url('./public/gfinal.jpg')",
       },
     },
   },
