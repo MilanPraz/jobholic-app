@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import Myheader from "../navbar/myheader";
+import Myheader from "./navbar/Myheader";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import LoginPage from "./Register/LoginPage";
@@ -17,7 +16,7 @@ import Prohibited from "./pages/Prohibited";
 
 function App() {
   const dispatch = useDispatch();
-  // useEffect(() => {
+
   let token = localStorage.getItem("token");
   if (token) {
     axios
@@ -32,7 +31,6 @@ function App() {
       })
       .catch((err) => console.log(err));
   }
-  // }, []);
 
   return (
     <>
