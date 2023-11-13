@@ -36,7 +36,7 @@ function Home() {
     <>
       <ToastContainer />
       <div
-        className={`bg-saleBanner  bg-cover  h-[70vh] flex  items-center justify-start `}
+        className={`bg-saleBanner  bg-cover  h-[100vh] flex  items-center justify-start `}
       >
         <div className=" container mx-auto">
           <div className="sm:w-1/3 pl-4  w-2/3">
@@ -61,7 +61,10 @@ function Home() {
       <PopularCategories />
 
       <div className="container mx-auto">
-        <h2 className=" mb-6 text-center text-xl font-bold mt-4 text-orange-600">
+        <h2
+          data-aos="slide-left"
+          className=" mb-6 text-center text-xl font-bold mt-4 text-orange-600"
+        >
           All Latest Listed Jobs
         </h2>
         <div className="flex flex-col gap-4 mb-8">

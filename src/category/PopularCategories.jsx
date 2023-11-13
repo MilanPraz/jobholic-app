@@ -6,13 +6,15 @@ import { useEffect } from "react";
 function PopularCategories() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
-    
   }, []);
 
   return (
     <div>
       <div className="  pb-4  bg-[#f6f7fa]">
-        <h2 className=" mb-6 text-center text-xl font-bold text-orange-600">
+        <h2
+          data-aos="slide-left"
+          className=" mb-6 text-center text-xl font-bold text-orange-600"
+        >
           Popular Categories
         </h2>
         <div className="">
