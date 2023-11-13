@@ -218,7 +218,7 @@ function Jobs() {
       )}
       <div className="mb-2  -z-10">
         {jobs.map((job) => (
-          <div data-aos="zoom-out" key={job._id} className="flex    flex-col  ">
+          <div data-aos="slide-up" key={job._id} className="flex    flex-col  ">
             <Singlejob
               handleEdit={handleEdit}
               handleDelete={handleDelete}
