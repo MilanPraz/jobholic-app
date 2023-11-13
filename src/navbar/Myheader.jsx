@@ -105,7 +105,7 @@ function Myheader() {
 
             {/* mobile menu */}
             {open ? (
-              <div className="md:hidden bg-gray-800  w-1/2   backdrop-blur-md bg-opacity-40 h-full pt-9  z-50 top-0 right-0  fixed">
+              <div className="md:hidden bg-gray-800  w-1/2   backdrop-blur-md bg-opacity-40 h-[100vh] pt-9  z-50 top-0 left-0  fixed">
                 <div onClick={handleHamburger} className=" z-30  pt-1  px-2 ">
                   <ul className="flex flex-col gap-4    font-mono text-orange-400">
                     {userDetail?.username && (
@@ -172,7 +172,7 @@ function Myheader() {
               </div>
             ) : null}
             {/* hamburger button */}
-            <div className="   z-50     top-0 right-4 flex md:hidden">
+            <div className="   z-50  fixed right-4 top-0 flex  md:hidden">
               <button
                 onClick={() => handleHamburger()}
                 className=" flex items-center justify-center p-2 text-xl cursor-pointer text-orange-400 outline-none border-none"
