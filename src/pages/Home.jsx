@@ -62,7 +62,7 @@ function Home() {
 
       <div className="container mx-auto">
         <h2
-          data-aos="slide-left"
+          data-aos="zoom-in"
           className=" mb-6 text-center text-xl font-bold mt-4 text-orange-600"
         >
           All Latest Listed Jobs

@@ -12,7 +12,7 @@ function PopularCategories() {
     <div>
       <div className="  pb-4  bg-[#f6f7fa]">
         <h2
-          data-aos="slide-left"
+          data-aos="zoom-in"
           className=" mb-6 text-center text-xl font-bold text-orange-600"
         >
           Popular Categories
