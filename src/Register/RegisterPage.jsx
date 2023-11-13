@@ -5,7 +5,6 @@ import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/jobholicLogo.png";
 
 function RegisterPage() {
   // const initialState = {
@@ -85,7 +84,7 @@ function RegisterPage() {
     // console.log(fd.get("username"));
     console.log(...fd);
     axios
-      .post("http://localhost:8008/api/signup", fd)
+      .post("https://jobholic.onrender.com/api/signup", fd)
       .then((res) => {
         toast.success("Signup Success");
         // console.log(res.data);

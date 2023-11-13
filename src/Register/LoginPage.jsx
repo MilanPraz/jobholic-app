@@ -19,7 +19,7 @@ function LoginPage() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:8008/api/login", {
+      .post("https://jobholic.onrender.com/api/login", {
         email: e.target.email.value,
         password: e.target.password.value,
       })
