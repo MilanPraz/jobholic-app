@@ -39,6 +39,7 @@ function JobDetail({ job }) {
     description,
     website_link,
     experience,
+    location,
   } = jobDetail;
 
   console.log(deadline_date);
@@ -120,6 +121,12 @@ function JobDetail({ job }) {
             Job Type:{" "}
             <span className=" text-lg ml-2 font-thin text-gray-500">
               {job_type}
+            </span>
+          </p>
+          <p className=" text-lg font-bold mt-1">
+            Location:{" "}
+            <span className=" text-lg ml-2 font-thin text-gray-500">
+              {location}
             </span>
           </p>
         </div>
