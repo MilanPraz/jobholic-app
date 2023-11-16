@@ -5,11 +5,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import { useSelector } from "react-redux";
 import ReactQuill from "react-quill";
+import { useNavigate } from "react-router-dom";
 import "react-quill/dist/quill.snow.css";
 
 function Createjob() {
   const userDetail = useSelector((state) => state.user.value);
-  const [description, setDescription] = useState("");
+  const navigate = useNavigate();
 
   const initialState = {
     title: "",
@@ -51,8 +52,9 @@ function Createjob() {
       })
       .then((res) => {
         toast.success("Created Successfully");
-        console.log(res.data);
+
         setJobData(initialState);
+        navigate("/");
       })
       .catch((err) => {
         console.log(err.response.data);
