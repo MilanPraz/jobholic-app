@@ -36,14 +36,14 @@ function Home() {
     <>
       <ToastContainer />
       <div
-        className={`bg-saleBanner  bg-cover  h-[80vh] flex  items-center justify-start `}
+        className={`bg-saleBanner  bg-cover  bg-top  h-[100vh] flex  items-center justify-start `}
       >
         <div className=" container mx-auto">
           <div className="sm:w-1/3 pl-4  w-2/3">
             <h2 className=" text-2xl font-bold text-green-700">
               Searching For A Job?
             </h2>
-            <p className=" text-sm font-thin text-gray-100 ">
+            <p className=" text-sm font-thin text-orange-500 sm:text-gray-100 ">
               Hand-picked opportunities to work from home remotely, freelance,
               full-time, part-time, contract and internship
             </p>
