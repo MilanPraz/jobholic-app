@@ -6,9 +6,11 @@ import { AiOutlineEdit } from "react-icons/ai";
 import { BsHourglassSplit } from "react-icons/bs";
 import { FaUserTie } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const url = "https://jobholic.onrender.com/";
 function FeaturedJob({ job }) {
+  const userDetail = useSelector((state) => state.user.value);
   const { tags } = job;
 
   // console.log(job);
@@ -50,26 +52,28 @@ function FeaturedJob({ job }) {
         >
           Read more
         </Link>
-        <div className="flex gap-2 absolute top-2 right-2">
-          <RiDeleteBin5Line
-            onClick={() => {
-              if (job._id !== userDetail._id) {
-                navigate("/prohibited");
-              } else {
-                handleDelete(job._id);
-              }
-            }}
-            className=" hidden group-hover:inline-block  text-xl   text-orange-700 "
-          />
-          {/* Delete */}
-          {/* </button> */}
-          <Link
-            to={`/job/edit/${job._id}`}
-            className=" hidden group-hover:inline-block    text-white"
-          >
-            <AiOutlineEdit className=" text-xl text-orange-700" />
-          </Link>
-        </div>
+        {userDetail.role === "company" ? (
+          <div className="flex gap-2 absolute top-2 right-2">
+            <RiDeleteBin5Line
+              onClick={() => {
+                if (job._id !== userDetail._id) {
+                  navigate("/prohibited");
+                } else {
+                  handleDelete(job._id);
+                }
+              }}
+              className=" hidden group-hover:inline-block  text-xl   text-orange-700 "
+            />
+            {/* Delete */}
+            {/* </button> */}
+            <Link
+              to={`/job/edit/${job._id}`}
+              className=" hidden group-hover:inline-block    text-white"
+            >
+              <AiOutlineEdit className=" text-xl text-orange-700" />
+            </Link>
+          </div>
+        ) : null}
       </div>
     </div>
   );
