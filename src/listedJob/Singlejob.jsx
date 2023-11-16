@@ -7,6 +7,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { AiOutlineEdit } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 import { Link } from "react-router-dom";
 
 const url = "https://jobholic.onrender.com/";
@@ -55,26 +56,28 @@ function Singlejob({ job, userDetail, handleDelete, handleEdit }) {
         >
           Read more
         </Link>
-        <div className="flex gap-2 absolute top-2 right-2">
-          <RiDeleteBin5Line
-            onClick={() => {
-              if (job._id !== userDetail._id) {
-                navigate("/prohibited");
-              } else {
-                handleDelete(job._id);
-              }
-            }}
-            className=" hidden group-hover:inline-block  text-xl   text-orange-700 "
-          />
-          {/* Delete */}
-          {/* </button> */}
-          <Link
-            to={`/job/edit/${job._id}`}
-            className=" hidden group-hover:inline-block    text-white"
-          >
-            <AiOutlineEdit className=" text-xl text-orange-700" />
-          </Link>
-        </div>
+        {userDetail.role === "company" ? (
+          <div className="flex gap-2 absolute top-2 right-2">
+            <RiDeleteBin5Line
+              onClick={() => {
+                if (job._id !== userDetail._id) {
+                  navigate("/prohibited");
+                } else {
+                  handleDelete(job._id);
+                }
+              }}
+              className=" hidden group-hover:inline-block  text-xl   text-orange-700 "
+            />
+            {/* Delete */}
+            {/* </button> */}
+            <Link
+              to={`/job/edit/${job._id}`}
+              className=" hidden group-hover:inline-block    text-white"
+            >
+              <AiOutlineEdit className=" text-xl text-orange-700" />
+            </Link>
+          </div>
+        ) : null}
       </div>
     </div>
   );

@@ -73,12 +73,14 @@ function JobDetail({ job }) {
           <h2 className=" font-bold text-4xl mx-auto text-center ">{title}</h2>
         </div>
         <div className="mx-auto mt-4">
-          <button
-            onClick={() => handleApply()}
-            className=" py-1 shadow-xl  shadow-green-200 border-2 border-green-300 text-xl bg-green-700 text-gray-200 px-4 rounded-lg mx-auto"
-          >
-            Apply This Job
-          </button>
+          {userDetail.role === "job-seeker" ? (
+            <button
+              onClick={() => handleApply()}
+              className=" py-1 shadow-xl  shadow-green-200 border-2 border-green-300 text-xl bg-green-700 text-gray-200 px-4 rounded-lg mx-auto"
+            >
+              Apply This Job
+            </button>
+          ) : null}
         </div>{" "}
         <hr className=" h-1 bg-red-800 my-6 w-full"></hr>
         <div className="container mx-auto">
