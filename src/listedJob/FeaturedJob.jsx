@@ -22,7 +22,7 @@ function FeaturedJob({ job }) {
         alt="mic"
       />
       <div className="flex flex-col pl-2 gap-1">
-        <p className=" text-lg font-mono font-bold">{job.title}</p>
+        <p className=" text-md md:text-lg font-mono font-bold">{job.title}</p>
         <div className=" flex items-center gap-4">
           <h2 className=" font-semibold text-[13px] sm:text-lg  text-green-800">
             Priority : {job.job_level}
