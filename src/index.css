@@ -9,10 +9,10 @@
   text-underline-offset: 5px;
 }
 
-/* .container {
-  padding-left: 4rem;
-  /* padding-right: 2rem; */
-/* } */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 .rc-pagination {
   display: flex;

@@ -52,7 +52,7 @@ function FeaturedJob({ job }) {
         >
           Read more
         </Link>
-        {userDetail.role === "company" ? (
+        {userDetail?.role === "company" ? (
           <div className="flex gap-2 absolute top-2 right-2">
             <RiDeleteBin5Line
               onClick={() => {

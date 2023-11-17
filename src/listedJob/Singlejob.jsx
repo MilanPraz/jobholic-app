@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const url = "https://jobholic.onrender.com/";
 function Singlejob({ job, userDetail, handleDelete, handleEdit }) {
-  // console.log(job);
+  console.log(job);
   console.log(userDetail);
   const navigate = useNavigate();
 
@@ -56,11 +56,11 @@ function Singlejob({ job, userDetail, handleDelete, handleEdit }) {
         >
           Read more
         </Link>
-        {userDetail.role === "company" ? (
+        {userDetail?.role === "company" ? (
           <div className="flex gap-2 absolute top-2 right-2">
             <RiDeleteBin5Line
               onClick={() => {
-                if (job._id !== userDetail._id) {
+                if (job.createdBy._id !== userDetail._id) {
                   navigate("/prohibited");
                 } else {
                   handleDelete(job._id);

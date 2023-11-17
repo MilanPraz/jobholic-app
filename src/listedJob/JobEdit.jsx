@@ -67,7 +67,7 @@ function JobEdit() {
         navigate("/job");
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err.response?.data);
         if (err.response) {
           const errorArray = err.response.data;
           let temp = {};

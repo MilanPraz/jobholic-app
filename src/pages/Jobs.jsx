@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Pagination from "rc-pagination";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { toast } from "react-toastify";
 
 function Jobs() {
   const initialState = {
@@ -63,6 +64,7 @@ function Jobs() {
       })
       .then((res) => {
         setjobs((jobs) => jobs.filter((job) => job._id !== id));
+        toast.success("Deleted Successfully");
         console.log(res.data);
       })
       .catch((Err) => console.log(Err));
