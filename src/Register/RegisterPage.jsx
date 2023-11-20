@@ -80,7 +80,8 @@ function RegisterPage() {
       fd.append("role", e.target.role.value);
       fd.append("image", profileImage);
     }
-
+    // fd.get("image") === "null" &&
+    //   setError({ ...error, image: "*Please add image" });
     // console.log(fd.get("username"));
     console.log(...fd);
     axios
@@ -97,7 +98,7 @@ function RegisterPage() {
         setError({});
         console.log("hello error");
         //Err.response.data.errors[0].msg)
-        if (Err.response.data.errors) {
+        if (Err.response?.data.errors) {
           const errorArray = Err.response.data.errors;
           let temp = {};
           errorArray.forEach((error) => {
