@@ -116,6 +116,7 @@ function RegisterPage() {
 
           // setError(Err.response?.data.errors[0].msg);
         }
+
         // if (error.repeat_password) {
         //   setError({
         //     ...error,
@@ -123,7 +124,7 @@ function RegisterPage() {
         //   });
         // }
         if (Err.response.data.msg) {
-          setError({ ...error, email: Err.response.data.msg });
+          setError({ email: Err.response.data.msg });
         }
       });
     setError({});
