@@ -81,13 +81,6 @@ function RegisterPage() {
       fd.append("image", profileImage || "");
     }
 
-    if (fd.get("image") === "null") {
-      setError({ ...error, image: "*Please add image" });
-    }
-    if (fd.get("website") === "") {
-      setError({ ...error, website: "*Please add website link" });
-    }
-
     // console.log(fd.get("username"));
     console.log(...fd);
     axios
@@ -101,7 +94,7 @@ function RegisterPage() {
       })
       .catch((Err) => {
         console.log(Err);
-        // setError({});
+        setError({});
         console.log("hello error");
         //Err.response.data.errors[0].msg)
         if (Err.response?.data.errors) {
@@ -110,18 +103,25 @@ function RegisterPage() {
           errorArray.forEach((error) => {
             temp[error.params] = error.msg;
 
-            // if (error.params === "repeat_password") {
-            //   temp.repeat_password = "Both password should be same";
-            // }
+            if (error.params === "repeat_password") {
+              temp.repeat_password = "Both password should be same";
+            }
+            if (error.params === "image") {
+              temp.image = "*Please add a Image";
+            }
           });
           // setError(temp);
-          setError({
-            ...temp,
-            repeat_password: "Both password should be same",
-          });
+
+          setError({ ...temp });
 
           // setError(Err.response?.data.errors[0].msg);
         }
+        // if (error.repeat_password) {
+        //   setError({
+        //     ...error,
+        //     repeat_password: "Both password should be same",
+        //   });
+        // }
         if (Err.response.data.msg) {
           setError({ ...error, email: Err.response.data.msg });
         }
