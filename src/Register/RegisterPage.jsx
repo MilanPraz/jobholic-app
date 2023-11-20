@@ -71,17 +71,23 @@ function RegisterPage() {
       fd.append("repeat_password", e.target.repeat_password.value);
       fd.append("role", e.target.role.value);
       fd.append("website", e.target.website.value);
-      fd.append("image", profileImage);
+      fd.append("image", profileImage || "");
     } else {
       fd.append("username", e.target.username.value);
       fd.append("email", e.target.email.value);
       fd.append("password", e.target.password.value);
       fd.append("repeat_password", e.target.repeat_password.value);
       fd.append("role", e.target.role.value);
-      fd.append("image", profileImage);
+      fd.append("image", profileImage || "");
     }
-    // fd.get("image") === "null" &&
-    //   setError({ ...error, image: "*Please add image" });
+
+    if (fd.get("image") === "null") {
+      setError({ ...error, image: "*Please add image" });
+    }
+    if (fd.get("website") === "") {
+      setError({ ...error, website: "*Please add website link" });
+    }
+
     // console.log(fd.get("username"));
     console.log(...fd);
     axios
@@ -95,7 +101,7 @@ function RegisterPage() {
       })
       .catch((Err) => {
         console.log(Err);
-        setError({});
+        // setError({});
         console.log("hello error");
         //Err.response.data.errors[0].msg)
         if (Err.response?.data.errors) {
