@@ -100,7 +100,7 @@ function Jobs() {
               placeholder="search by job title"
             />
           </div>
-          <div className="flex   justify-between sm:justify-normal">
+          <div className="flex gap-1  justify-between sm:justify-normal">
             <div className="flex flex-col gap-1 text-center">
               <label className=" text-sm font-thin ">Job Type</label>
               <select
@@ -120,7 +120,7 @@ function Jobs() {
               </select>
             </div>
             <div className="flex flex-col gap-1 text-center">
-              <label className=" text-sm font-thin ">Job Type</label>
+              <label className=" text-sm font-thin ">Job Level</label>
               <select
                 name="job_level"
                 onChange={(e) => {
