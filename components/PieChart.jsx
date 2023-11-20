@@ -27,8 +27,8 @@ function PieChart({ chartData }) {
       <h2 className=" underline mt-4 text-2xl font-thin text-center   decoration-green-300 mb-4">
         Pie-Chart for Active & Inactive Jobs
       </h2>
-      <div className=" h-full w-full mb-8 pb-8 flex items-center justify-center">
-        <div className=" w-1/2 ">
+      <div className=" h-56 mb-8 pb-8 flex">
+        <div className=" mx-auto  md:w-56 md:h-56">
           <Pie data={piedata} />
         </div>
       </div>
