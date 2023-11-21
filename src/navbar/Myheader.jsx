@@ -66,14 +66,14 @@ function Myheader() {
                     </span>
                   </>
                 )}
-                <li className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300">
+                <li className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-400 hover:drop-shadow-md  duration-300">
                   <NavLink to="/">Home</NavLink>
                 </li>
-                <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
+                <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-400 duration-300 hover:drop-shadow-md  ">
                   <NavLink to="/job">Jobs</NavLink>
                 </li>
                 {userDetail && (
-                  <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
+                  <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-400 duration-300 hover:drop-shadow-md  ">
                     <NavLink to="/chart">
                       Charts
                       <AiOutlineBarChart className="inline" />
@@ -81,7 +81,7 @@ function Myheader() {
                   </li>
                 )}
                 <ProtectedComponent role={"company"}>
-                  <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
+                  <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-400 duration-300 hover:drop-shadow-md  ">
                     <NavLink to="/job/create">Create a Job</NavLink>
                   </li>
                 </ProtectedComponent>
