@@ -48,13 +48,13 @@ function Myheader() {
         <div className="  flex justify-between items-center ">
           <div className="flex gap-1 items-center ">
             <img className="w-8 rounded-full h-8 mr-2" src={logo} alt="logo" />
-            <Link to="/" className=" text-xl font-bold text-orange-500">
+            <Link to="/" className=" text-xl font-bold text-my-green">
               Jobholic
             </Link>
           </div>
-          <div className=" flex  mx-4 ">
+          <div className=" flex  mx-4  ">
             <div className=" hidden md:block pt-1 ">
-              <ul className="flex gap-4 justify-between font-mono text-orange-500">
+              <ul className="flex gap-4 justify-between items-center font-mono text-my-green">
                 {userDetail?.username && (
                   <>
                     <img
@@ -66,14 +66,14 @@ function Myheader() {
                     </span>
                   </>
                 )}
-                <li className="transition ease-in-out delay-150 bg-green-700 hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300">
+                <li className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300">
                   <NavLink to="/">Home</NavLink>
                 </li>
-                <li className=" transition ease-in-out delay-150 bg-green-700 hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
+                <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
                   <NavLink to="/job">Jobs</NavLink>
                 </li>
                 {userDetail && (
-                  <li className=" transition ease-in-out delay-150 bg-green-700 hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
+                  <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
                     <NavLink to="/chart">
                       Charts
                       <AiOutlineBarChart className="inline" />
@@ -81,13 +81,13 @@ function Myheader() {
                   </li>
                 )}
                 <ProtectedComponent role={"company"}>
-                  <li className=" transition ease-in-out delay-150 bg-green-700 hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
+                  <li className=" transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-125 hover:text-gray-200 duration-300 ">
                     <NavLink to="/job/create">Create a Job</NavLink>
                   </li>
                 </ProtectedComponent>
                 {userDetail ? (
                   <span
-                    className="  text-gray-100 bg-orange-400 px-1 py-1 rounded-md cursor-pointer"
+                    className="  text-gray-100 bg-my-green px-1 py-1 rounded-md cursor-pointer"
                     onClick={() => handleLogout()}
                   >
                     log out
@@ -95,7 +95,7 @@ function Myheader() {
                 ) : (
                   <Link
                     to={"/login"}
-                    className=" text-gray-100 bg-orange-400 px-1 rounded-md cursor-pointer"
+                    className=" text-gray-100 bg-my-green px-1 rounded-md cursor-pointer"
                   >
                     login
                   </Link>
@@ -123,7 +123,7 @@ function Myheader() {
                             Hello,{userDetail.username}
                           </span>
                         </div>
-                        <hr className=" bg-green-600 my-3" />
+                        <hr className=" bg-my-green my-3" />
                       </>
                     )}
                     <li className="md:text-orange-400">
@@ -172,7 +172,7 @@ function Myheader() {
               </div>
             ) : null}
             {/* hamburger button */}
-            <div className="  bg-green-700 rounded-lg  z-50  fixed right-4 top-0 flex  md:hidden">
+            <div className="  bg-my-green rounded-lg  z-50  fixed right-4 top-0 flex  md:hidden">
               <button
                 onClick={() => handleHamburger()}
                 className=" flex items-center justify-center p-2 text-xl cursor-pointer text-orange-400 outline-none border-none"

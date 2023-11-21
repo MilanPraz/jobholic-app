@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "my-green": "bg-green-700",
+        "my-green": " #338573",
       },
       backgroundImage: {
-        saleBanner: "url('/gfinal.jpg')",
+        saleBanner: "url('/gfinalbg00.png')",
       },
     },
   },

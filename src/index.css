@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .active {
-  color: rgb(243, 240, 240);
+  color: black;
   text-decoration: underline 0.2rem;
 
   text-underline-offset: 5px;
@@ -22,14 +22,14 @@
 }
 .rc-pagination li {
   cursor: pointer;
-  border: 1px solid green;
+  border: 1px solid #338573;
   padding: 0.5rem;
 }
 .rc-pagination-options {
   display: none;
 }
 .rc-pagination-item-active {
-  background-color: mediumseagreen;
+  background-color: #338573;
 }
 .rc-pagination-disabled {
   cursor: no-drop !important;

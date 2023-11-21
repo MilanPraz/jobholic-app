@@ -22,10 +22,10 @@ function BarChart({ chartData }) {
 
   return (
     <>
-      <div className=" text-black text-center text-2xl underline-offset-4 underline">
+      <div className=" bg-[#F6F7FA] text-black text-center text-2xl underline-offset-4 underline">
         Chart Below
       </div>
-      <hr className="  bg-green-700"></hr>
+
       <h2 className=" underline mt-4 text-2xl font-thin text-center   decoration-green-300 mb-4">
         Bar-Diagram showing status of your jobs application
       </h2>

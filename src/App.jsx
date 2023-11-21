@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-green-700">
+      <div className="bg-white">
         <Myheader />
       </div>
       <Routes>

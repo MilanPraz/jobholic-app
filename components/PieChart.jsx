@@ -20,10 +20,10 @@ function PieChart({ chartData }) {
 
   return (
     <>
-      <div className=" text-black text-center text-2xl underline-offset-4 underline">
+      <div className=" bg-[#F6F7FA] py-6 text-black text-center text-2xl ">
         Chart Below
       </div>
-      <hr className="  bg-green-700"></hr>
+
       <h2 className=" underline mt-4 text-2xl font-thin text-center   decoration-green-300 mb-4">
         Pie-Chart for Active & Inactive Jobs
       </h2>

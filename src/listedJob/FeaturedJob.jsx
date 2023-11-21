@@ -22,16 +22,16 @@ function FeaturedJob({ job }) {
         alt="mic"
       />
       <div className="flex flex-col pl-2 gap-1">
-        <p className=" text-md md:text-lg font-mono font-bold">{job.title}</p>
+        <p className=" text-md md:text-lg  font-bold">{job.title}</p>
         <div className=" flex items-center gap-4">
-          <h2 className=" font-semibold text-[13px] sm:text-lg  text-green-800">
+          <h2 className=" font-semibold text-[10px] sm:text-md  text-my-green">
             Priority : {job.job_level}
           </h2>
           <div className="flex flex-wrap gap-0.5">
             {tags?.map((data) => {
               return (
                 <div
-                  className=" mt-1 bg-orange-400 px-1 sm:px-2 sm:py-0.5 text-[10px] font-thin rounded-lg text-gray-200"
+                  className=" mt-1 bg-my-green px-1 sm:px-2 sm:py-0.5 text-[10px] font-thin rounded-lg text-gray-200"
                   key={data}
                 >
                   <span>{data}</span>
@@ -41,14 +41,14 @@ function FeaturedJob({ job }) {
           </div>
         </div>
         <div className="flex gap-2">
-          <BsHourglassSplit className="  text-orange-700" />
+          <BsHourglassSplit className="  text-my-green" />
           <span className="text-sm font-thin  ">{job.job_type}</span>
-          <FaUserTie className=" text-green-700 ml-2" />
+          <FaUserTie className=" text-my-green ml-2" />
           <span className="text-sm font-thin  ">{job.experience}-year Exp</span>
         </div>
         <Link
           to={`/job/${job._id}`}
-          className=" hidden group-hover:inline-block right-4 bottom-2 py-1 px-2 text-sm font-thin absolute  text-white bg-orange-700 rounded-md"
+          className=" hidden group-hover:inline-block right-4 bottom-2 py-1 px-2 text-sm font-thin absolute  text-white bg-my-green rounded-md"
         >
           Read more
         </Link>
@@ -62,7 +62,7 @@ function FeaturedJob({ job }) {
                   handleDelete(job._id);
                 }
               }}
-              className=" hidden group-hover:inline-block  text-xl   text-orange-700 "
+              className=" hidden group-hover:inline-block  text-xl   text-my-green "
             />
             {/* Delete */}
             {/* </button> */}
@@ -70,7 +70,7 @@ function FeaturedJob({ job }) {
               to={`/job/edit/${job._id}`}
               className=" hidden group-hover:inline-block    text-white"
             >
-              <AiOutlineEdit className=" text-xl text-orange-700" />
+              <AiOutlineEdit className=" text-xl text-my-green" />
             </Link>
           </div>
         ) : null}
