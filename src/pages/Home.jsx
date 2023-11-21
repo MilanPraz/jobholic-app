@@ -69,14 +69,10 @@ function Home() {
         >
           All Latest Listed Jobs
         </h2>
-        <div className="flex flex-col gap-4 mb-8">
+        <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2  mb-8">
           {jobs.map((job) =>
             job.type == "hot" ? (
-              <div
-                data-aos="fade-up"
-                key={job._id}
-                className="flex    flex-col   "
-              >
+              <div data-aos="fade-up" key={job._id} className="flex flex-col ">
                 <FeaturedJob key={job._id} job={job} />
               </div>
             ) : null
