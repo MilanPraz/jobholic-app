@@ -36,7 +36,7 @@ function Home() {
     <>
       <ToastContainer />
       <div
-        className={`bg-saleBanner  bg-cover  bg-top  h-[100vh] flex  items-center justify-start `}
+        className={`bg-saleBanner  bg-cover  b  h-[100vh] flex  items-center justify-start `}
       >
         <div className=" container mx-auto">
           <div className="sm:w-1/3 pl-4  w-2/3">
