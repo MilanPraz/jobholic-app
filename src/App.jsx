@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-white  drop-shadow-md">
+      <div className="bg-white  ">
         <Myheader />
       </div>
       <Routes>

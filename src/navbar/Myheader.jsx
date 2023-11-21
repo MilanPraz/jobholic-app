@@ -41,7 +41,7 @@ function Myheader() {
     dispatch(logoutUser());
   }
   return (
-    <div className=" container mx-auto py-2">
+    <div className=" container mx-auto py-4">
       <ToastContainer />
       {/* <Toaster /> */}
       <nav className="  ">
@@ -105,9 +105,9 @@ function Myheader() {
 
             {/* mobile menu */}
             {open ? (
-              <div className="md:hidden overflow-hidden bg-gray-800  w-full backdrop-blur-md bg-opacity-40 h-full pt-9  z-50 top-0 left-0  fixed">
-                <div onClick={handleHamburger} className=" z-30  pt-1  px-2 ">
-                  <ul className="flex flex-col gap-4   items-center text-2xl  font-mono text-orange-400">
+              <div className="md:hidden  backdrop-blur-md bg-gray-800 h-full  w-full bg-opacity-40  pt-9  z-40 fixed top-0 left-0  ">
+                <div onClick={handleHamburger} className=" z-50  pt-1  px-2 ">
+                  <ul className="flex flex-col gap-4   items-center text-2xl  font-mono text-black">
                     {userDetail?.username && (
                       <>
                         <div className="flex items-center  gap-2">
@@ -126,7 +126,7 @@ function Myheader() {
                         <hr className=" bg-my-green my-3" />
                       </>
                     )}
-                    <li className="md:text-orange-400">
+                    <li className="md:text-my-green">
                       <NavLink to="/">Home</NavLink>
                     </li>
                     {/* transition-all duration-500 hover:bg-orange-400 hover:px-2  hover:rounded-lg */}
@@ -142,9 +142,7 @@ function Myheader() {
                     <ProtectedComponent role={"company"}>
                       <li className=" transition-all duration-500  border-none">
                         <NavLink
-                          className={`${
-                            path === "/job/create" && "text-orange-400"
-                          }
+                          className={`${path === "/job/create" && "text-black"}
                         font-bold   `}
                           to="/job/create"
                         >
@@ -154,7 +152,7 @@ function Myheader() {
                     </ProtectedComponent>
                     {userDetail ? (
                       <span
-                        className="   text-gray-200 bg-orange-400 px-1 text-center rounded-md cursor-pointer"
+                        className="   text-gray-200 bg-my-green px-1 text-center rounded-md cursor-pointer"
                         onClick={() => handleLogout()}
                       >
                         log out
@@ -162,7 +160,7 @@ function Myheader() {
                     ) : (
                       <Link
                         to={"/login"}
-                        className=" text-center text-gray-200 bg-orange-400 px-1 rounded-md cursor-pointer"
+                        className=" text-center text-gray-200 bg-my-green px-1 rounded-md cursor-pointer"
                       >
                         login
                       </Link>
@@ -172,10 +170,10 @@ function Myheader() {
               </div>
             ) : null}
             {/* hamburger button */}
-            <div className="  bg-my-green rounded-lg  z-50  fixed right-4 top-0 flex  md:hidden">
+            <div className=" bg-white drop-shadow-md  rounded-lg  z-50  fixed right-4 top-2 flex  md:hidden">
               <button
                 onClick={() => handleHamburger()}
-                className=" flex items-center justify-center p-2 text-xl cursor-pointer text-orange-400 outline-none border-none"
+                className=" flex items-center justify-center p-2 text-xl cursor-pointer text-my-green outline-none border-none"
               >
                 {open == true ? <FaTimes /> : <FaBars />}
               </button>
