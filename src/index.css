@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
 .active {
   color: black;
   text-decoration: underline 0.2rem;
